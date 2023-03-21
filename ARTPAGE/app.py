@@ -10,25 +10,25 @@ def adminpage():
 def home():
     return render_template('adminpage.html')
 
-@app.route('/login', methods=['POST','GET'])
-def login(e):
+@app.route('/login')
+def login():
     return render_template('login.html')
 
-@app.errorhandler(404)
+
 @app.route('/acrylic')
-def acrylic(e):
+def acrylic():
     return render_template('acrylic.html')
 
 
 @app.route("/charcoal" )
-def charcoal(e):
+def charcoal():
     return render_template('charcoal.html')
 
 
 @app.route('/potrait')
-def potrait(e):
+def potrait():
     return render_template('potrait.html')
     
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,port=5000,use_reloader=False)
 
