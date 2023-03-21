@@ -28,12 +28,6 @@ def charcoal(e):
 @app.route('/potrait')
 def potrait(e):
     return render_template('potrait.html')
-
-
-    
- app.route('/hh')
- def hh():
-     return 'hh'
     
 if __name__ == "__main__":
     app.run(debug=True)
